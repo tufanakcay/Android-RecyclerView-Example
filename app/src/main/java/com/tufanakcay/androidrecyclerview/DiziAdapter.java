@@ -1,5 +1,6 @@
 package com.tufanakcay.androidrecyclerview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +31,7 @@ public class DiziAdapter extends RecyclerView.Adapter<DiziAdapter.tanimla> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull tanimla holder, int position) {
+    public void onBindViewHolder(@NonNull tanimla holder, @SuppressLint("RecyclerView") final int position) {
 
         holder.dizi_Adi.setText(list.get(position).getDiziAdi());
         holder.dizi_Yil.setText(list.get(position).getDiziYapimYili());
@@ -40,7 +41,7 @@ public class DiziAdapter extends RecyclerView.Adapter<DiziAdapter.tanimla> {
         holder.dizi_Resim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, list.get(holder.getAdapterPosition()).getDiziAdi(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, list.get(position).getDiziAdi(), Toast.LENGTH_SHORT).show();
             }
         });
 
