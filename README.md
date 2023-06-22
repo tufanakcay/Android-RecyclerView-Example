@@ -1,2 +1,2 @@
-# AndroidRecyclerView
+# Android RecyclerView
  Android RecyclerView
