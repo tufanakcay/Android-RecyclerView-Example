@@ -47,7 +47,5 @@ public class MainActivity extends AppCompatActivity {
         adp = new DiziAdapter(this, diziListem);
         recyclerView.setAdapter(adp);
 
-
-
     }
 }
